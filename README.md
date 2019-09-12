@@ -1,2 +1,2 @@
 # streisand-container
-A container to build streisand gateway
+Create a Streisand Builder container, deploy Streisand to cloud providers of your choice and serve the generated web content.
