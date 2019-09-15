@@ -1,13 +1,16 @@
 package main
 
 import (
-"context"
-"fmt"
+	"context"
+	"fmt"
 
-"github.com/docker/docker/api/types"
-"github.com/docker/docker/api/types/container"
-"github.com/docker/docker/client"
-"github.com/docker/go-connections/nat"
+	//	"fmt"
+	//	"github.com/docker/go-connections/nat"
+
+	"github.com/docker/docker/api/types"
+	"github.com/docker/docker/api/types/container"
+	"github.com/docker/docker/client"
+	"github.com/docker/go-connections/nat"
 )
 
 func CreateNewContainer(image string) (string, error) {
@@ -38,7 +41,7 @@ func CreateNewContainer(image string) (string, error) {
 	if err != nil {
 		panic(err)
 	}
-	
+
 	cli.ContainerStart(context.Background(), cont.ID, types.ContainerStartOptions{})
 	fmt.Printf("Container %s is started", cont.ID)
 	return cont.ID, nil
